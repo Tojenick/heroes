@@ -1,0 +1,10 @@
+<h2>Heroes</h2>
+<ul class="heroes">
+  <my-hero-item *ngFor="let hero of heroes" [hero]="hero"></my-hero-item>
+</ul>
+<div *ngIf="selected != null">
+  <h2>
+    {{selected.name | uppercase}} is my hero
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
